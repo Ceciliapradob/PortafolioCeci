@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <form className={styles.contactForm} onSubmit={handleSubmit}>
+    <form className={styles.contactForm} onSubmit={handleSubmit} id="contact">
       <input
         type="text"
         name="name"

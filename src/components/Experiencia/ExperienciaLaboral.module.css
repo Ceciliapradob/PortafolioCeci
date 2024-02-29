@@ -4,7 +4,7 @@
   margin: 50px 0;
 }
 
-.line{
+.line {
   width: 76%;
   margin-left: 12%;
   border: 2px solid pink;
@@ -78,6 +78,32 @@ button:hover {
   }
 
   .experienciaCard {
-    width: 85%;
+    width: 90%;
+    /* Reducir el ancho de la card en dispositivos móviles */
+    text-align: justify;
+    /* Alinear texto al centro en dispositivos móviles */
+  }
+
+  .infoContainer {
+    text-align: left;
+    margin-left: 5%;
+    /* Ajustar el margen izquierdo a cero */
+  }
+
+  button {
+    margin-top: 10px;
+    /* Aumentar el espacio entre el texto y el botón en dispositivos móviles */
+  }
+}
+
+@media screen and (max-width:468px) {
+  .experienciaCard {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  button {
+    margin-top: 5%;
   }
 }

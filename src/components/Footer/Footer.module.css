@@ -1,0 +1,56 @@
+    /* Footer.module.css */
+    .footer {
+        margin-top: 5%;
+        color: white;
+        background-color: rgb(98, 14, 131);
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .socialBox,
+    .contactBox,
+    .brand {
+        text-align: center;
+    }
+    
+    .socialBox a,
+    .contactIcons {
+        margin: 5px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .contactIcons {
+        display: flex;
+    }
+    
+    .contactBox p {
+        margin: 5px 0;
+    }
+    
+    /* Media query para pantallas pequeñas */
+    @media screen and (max-width: 768px) {
+        .footer {
+        flex-direction: column;
+        }
+    }
+    
+    /* Media query para tabletas */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .footer {
+      flex-direction: row; /* Cambiar a fila en tabletas */
+      justify-content: space-around;
+    }
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 480px) {
+    .socialBox,
+    .contactBox,
+    .brand {
+      margin-bottom: 10px; /* Reducir espacio entre las cajas en móviles */
+    }
+  }

@@ -1,0 +1,22 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar archivos de configuración locales
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignorar archivos de configuración
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignorar archivos de construcción/dist
+/dist/
+/build/
+
+# Ignorar archivos generados por Vite
+.eslintcache
+.log

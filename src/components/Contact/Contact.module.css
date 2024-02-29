@@ -1,0 +1,73 @@
+/* ContactForm.module.css */
+.contactForm {
+  max-width: 600px; /* Aumentar el ancho del formulario */
+  margin: 0 auto;
+  padding: 30px; /* Aumentar el espacio interno */
+  border: 2px solid #8a2be2; /* Cambiar el color del borde a violeta */
+  border-radius: 15px;
+  background-color: transparent; /* Cambiar el color de fondo */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px; /* Aumentar el espacio interno de los inputs y textarea */
+  margin-bottom: 20px; /* Aumentar el espacio entre los elementos */
+  border: 1px solid #8a2be2;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #8a2be2; /* Cambiar el color de fondo del botón a violeta */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #6a1c9c; /* Cambiar el color de fondo al hacer hover */
+}
+
+
+@media all and (max-width:468px){
+  /* ContactForm.module.css */
+.contactForm {
+  max-width: 85%; /* Ajustar el ancho del formulario para pantallas pequeñas */
+  margin: 0 auto;
+  padding: 20px; /* Reducir el espacio interno */
+  border: 2px solid #8a2be2; /* Cambiar el color del borde a violeta */
+  border-radius: 15px;
+  background-color: transparent; /* Cambiar el color de fondo */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px; /* Reducir el espacio interno de los inputs y textarea */
+  margin-bottom: 15px; /* Reducir el espacio entre los elementos */
+  border: 1px solid #8a2be2;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+button {
+  width: 100%;
+  padding: 10px; /* Reducir el espacio interno del botón */
+  background-color: #8a2be2; /* Cambiar el color de fondo del botón a violeta */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #6a1c9c; /* Cambiar el color de fondo al hacer hover */
+}
+
+}

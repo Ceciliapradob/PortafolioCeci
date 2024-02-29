@@ -1,48 +1,47 @@
 // ContactForm.jsx
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Contact.module.css"; // Asegúrate de importar tus estilos CSS
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const form = useRef();
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log("Formulario enviado:", formData);
+
+    emailjs.sendForm('service_gqxkrid', 'template_z4s8kbw', form.current, 'YNeCEgdNT4Pg6aoun')
+      .then((result) => {
+        console.log(result.text);
+        setSuccessMessage('¡Gracias por contactarme, tu mensaje ha sido enviado con éxito!');
+        // Resetear el formulario
+        form.current.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
   };
 
   return (
-    <form className={styles.contactForm} onSubmit={handleSubmit} id="contact">
+    <form className={styles.contactForm} ref={form} onSubmit={sendEmail} id="contact">
       <input
         type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
+        name="user_name"
+
         placeholder="Nombre"
       />
       <input
         type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
+        name="user_email"
+
         placeholder="Correo electrónico"
       />
       <textarea
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
+        name="user_message"
+
         placeholder="Mensaje"
       />
       <button type="submit">Enviar</button>
+      {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
     </form>
   );
 };

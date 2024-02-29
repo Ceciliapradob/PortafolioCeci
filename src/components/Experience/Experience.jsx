@@ -7,7 +7,7 @@ import "./Experience.css";
 
 export const Experience = () => {
   return (
-    <section className="section-tl">
+    <section className="section-tl" id="technology">
       <h2>Lenguajes y tecnologías</h2>
 
       <div className='technologies-section'>

@@ -79,6 +79,7 @@ button:hover {
     /* Reducir el espacio interno de los inputs y textarea */
     margin-bottom: 15px;
     /* Reducir el espacio entre los elementos */
+    color: white;
     border: 1px solid #8a2be2;
     border-radius: 8px;
     background-color: transparent;

@@ -7,17 +7,17 @@ const CertificatesSection = () => {
   const certificates = [
     {
       id: 1,
-      image: "../assets/certificate/frontend.png",
+      image: "/assets/certificate/frontend.png",
       alt: "Certificado 1",
     },
     {
       id: 2,
-      image: "../assets/certificate/diseñoweb.png",
+      image: "/assets/certificate/diseñoweb.png",
       alt: "Certificado 2",
     },
     {
       id: 3,
-      image: "../assets/certificate/argprograma.png",
+      image: "/assets/certificate/argprograma.png",
       alt: "Certificado 3",
     },
   ];
